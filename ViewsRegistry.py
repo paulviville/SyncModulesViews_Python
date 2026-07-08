@@ -10,7 +10,6 @@ class ViewsRegistry ( ViewCore ):
 		bpy.context.scene.collection.children.link( self._collection )
 
 		self._views = { }
-		# self.setCallbacks( )
 
 		root = bpy.data.objects.new( "RegistryRoot", None )
 		self._collection.objects.link( root )
@@ -24,8 +23,7 @@ class ViewsRegistry ( ViewCore ):
 		return self._views.get( moduleUUID )
 
 	def _addModuleView ( self, module ):
-		print( "_addModuleView" )
-		print( module.type )
+		print( f"_addModuleView { module.type }" )
 
 		type = module.type
 		UUID = module.UUID

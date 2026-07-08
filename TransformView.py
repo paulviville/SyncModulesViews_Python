@@ -12,23 +12,20 @@ class TransformView ( ViewCore ):
 		self._root.rotation_mode = "QUATERNION"
 
 		self._collection.objects.link( self._root )
+		self._updateTransform( transformModule.transform )
 	
-	def setCallbacks(self):
+	def setCallbacks( self ):
 		self._module.setOnChange( self.module.commands.updateTransform, self._updateTransform )
 
 	def _updateTransform ( self, transform ):
-		print( "self._updateTransform")
+		print(self.type)
 		translation = transform.get( "translation" )
 		rotation = transform.get( "rotation" )
 		scale = transform.get( "scale" )
 
 		if translation is not None:
-			self._root.location = ( translation[ 0 ], translation[ 1 ], translation[ 2 ] )
+			self._root.location = translation
 		if rotation is not None:
 			self._root.rotation_quaternion = ( rotation[ 3 ], rotation[ 0 ], rotation[ 1 ], rotation[ 2 ] )
 		if scale is not None:
-			self._root.scale = ( scale[ 0 ], scale[ 1 ], scale[ 2 ] )
-
-	# @property
-	# def root ( self ):
-	# 	return self._root
+			self._root.scale = scale

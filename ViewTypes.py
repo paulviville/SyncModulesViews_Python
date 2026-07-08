@@ -2,17 +2,16 @@ from .ViewCore import ViewCore
 # from ..ScalarModule import ScalarModule
 # from ..Vector3Module import Vector3Module
 from .TransformView import TransformView
-# from ..PrimitiveModule import PrimitiveModule
-# from ..CameraModule import CameraModule
-# from ..LineModule import LineModule
+from .PrimitiveView import PrimitiveView
+from .CameraView import CameraView
+from .LineView import LineView
 
 ViewTypes = {
 	"ModuleCore": ViewCore,
 	"TransformModule": TransformView,
-	# "ScalarModule": ScalarModule,
 	# "Vector3Module": Vector3Module,
 	# "TransformModule": TransformModule,
-	# "PrimitiveModule": PrimitiveModule,
-	# "CameraModule": CameraModule,
-	# "LineModule": LineModule
+	"PrimitiveModule": PrimitiveView,
+	"CameraModule": CameraView,
+	"LineModule": LineView
 }

@@ -1,0 +1,1 @@
+from .ViewsRegistry import ViewsRegistry
