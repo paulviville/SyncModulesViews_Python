@@ -5,6 +5,7 @@ from .TransformView import TransformView
 from .PrimitiveView import PrimitiveView
 from .CameraView import CameraView
 from .LineView import LineView
+from .PointsView import PointsView
 
 ViewTypes = {
 	"ModuleCore": ViewCore,
@@ -13,5 +14,6 @@ ViewTypes = {
 	# "TransformModule": TransformModule,
 	"PrimitiveModule": PrimitiveView,
 	"CameraModule": CameraView,
-	"LineModule": LineView
+	"LineModule": LineView,
+	"PointsModule": PointsView
 }
