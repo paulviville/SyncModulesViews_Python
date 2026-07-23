@@ -25,7 +25,7 @@ class PrimitiveView ( TransformView ):
 		self._updatePrimitive( primitiveModule.primitive )
 	
 	def setCallbacks( self ):
-		print( "PrimitiveView - __init__" )
+		print( "PrimitiveView - setCallbacks" )
 		super( ).setCallbacks(  )
 		self._module.setOnChange( self.module.commands.updatePrimitive, self._updatePrimitive )
 
